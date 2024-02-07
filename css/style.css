@@ -1,0 +1,341 @@
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/Golos-Text/GolosText-Regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+  display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/Golos-Text/GolosText-Medium.woff2");
+  font-style: normal;
+  font-weight: 500;
+  display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/Golos-Text/GolosText-SemiBold.woff2");
+  font-style: normal;
+  font-weight: 600;
+  display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather/Merriweather-Regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+  display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather/Merriweather-Bold.woff2");
+  font-style: normal;
+  font-weight: 700;
+  display: swap;
+}
+
+.list-null {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-null {
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Golos Text", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #313131;
+  background-color: #FFFFFF;
+}
+
+
+@media (min-width: 375px) {
+
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    margin: 0 auto;
+    min-height: 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .visually-hidden {
+    position:absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: o;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+
+  .hero {
+    background-image: url("../img/hero-background-375x812.jpg");
+    padding: 18px 20px 0;
+    min-height: 812px;
+    position: relative;
+  }
+
+  .hero::after {
+    content: "";
+    display: block;
+    background-image: url("../img/hero-image-375x411.png");
+    background-size: 375px 411px;
+    width: 375px;
+    height: 411px;
+    position: absolute;
+    left: 0;
+    bottom: 17px;
+  }
+
+  .hero__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__logo {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .titles {
+    font-family: "Merriweather", "Arial", sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .hero__title {
+    display: flex;
+    flex-direction: column;    
+    margin: 0;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  .decor-text-center {
+    display: inline-block;
+    margin-left: 64px;
+  }
+
+  .decor-text-right {
+    align-self: flex-end;
+  }
+
+  .hero__description {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .hero__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 335px;
+  min-height: 47px;
+  font-weight: 500;
+  border: none;
+  border-radius: 66px;
+}
+
+  .hero__support {
+    color: #FFFFFF;
+    background-color: #1F1F1F;
+  }
+
+  .hero__details {
+    color: #313131;
+    background-color: #FFFFFF;
+  }
+
+  .hero__ticker {
+    display: flex;
+    width: 375px;
+    height: 38px;
+    background-color: #F54932;
+    position: absolute;
+    left: -20px;
+    bottom: -319px;
+    overflow: hidden;
+  }
+
+  .hero__ticker-text {
+    font-family: "Merriweather", "Arial", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  .support {
+    padding: 48px 20px 0;
+  }
+
+  .support__description {
+    font-family: "Merriweather", "Arial", sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  .support__description--mid {
+    margin-bottom: 34px;
+  }
+
+  .support__description--end {
+    margin-bottom: 44px;
+  }
+
+  .highlight-text {
+    color: #F54932;
+    font-weight: 700;
+  }
+
+  .support__list-desctop {
+    display: none;    
+  }
+  
+  .support__list-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .support__item-mobile {
+    padding: 16px 0;
+  }
+
+  .support__item-mobile:not(:last-child) {
+    border-bottom: #D0D0D0 2px solid;
+  }
+
+  .support__item-mobile:nth-last-child(1) {
+    margin-bottom: 24px;
+  }
+
+  .support__item-mobile-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .semi-bold {
+    font-weight: 600;
+  }
+
+  .support__help, .progress__description {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #3057A2;
+  }
+
+  .progress {
+    padding: 120px 20px 0;
+  }
+
+  .progress__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .progress__description {
+    margin-bottom: 210px;
+  }
+
+  .progress__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+
+  .progress__list::before {
+    content: "";
+    display: block;
+    width: 335px;
+    height: 182px;
+    background-image: url("../img/plane-335x182.png");
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: -128px;
+  }
+
+  .progress__item {
+    padding: 62px 20px 34px 72px;
+    background-image: url("../img/background-item-335x300.jpg");
+  }
+  
+  .progress__item-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .progress__item-text::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    left: -52px;
+    top: 0;
+  }
+
+  .progress__item-text::after {
+    content: "1";
+    display: block;
+    font-size: 20px;
+    color: #313131;
+    font-weight: 600;
+    position: absolute;
+    top: 5px;
+    left: -40px
+  }
+
+
+
+
+
+
+
+
+}
